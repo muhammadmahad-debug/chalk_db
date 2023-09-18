@@ -1,7 +1,7 @@
 {
-  "name": "stripe-backend",
+  "name": "chalk_database",
   "version": "0.1.0",
-  "description": "stripe subscription",
+  "description": "chalk_database",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon api/index.js",
