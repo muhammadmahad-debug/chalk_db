@@ -76,32 +76,32 @@ async function handler(req, res) {
   }
 }
 
-const { createServer } = require("http");
-const { parse } = require("url");
-const { cors } = require("micro-cors")(); // Using micro-cors for simplicity
+// const { createServer } = require("http");
+// const { parse } = require("url");
+// const { cors } = require("micro-cors")(); // Using micro-cors for simplicity
 
-const handler = (req, res) => {
-  // Your API logic here
+// const handler = (req, res) => {
+//   // Your API logic here
 
-  res.end("API response");
-};
+//   res.end("API response");
+// };
 
-const server = createServer((req, res) => {
-  const parsedUrl = parse(req.url, true);
-  const { pathname } = parsedUrl;
+// const server = createServer((req, res) => {
+//   const parsedUrl = parse(req.url, true);
+//   const { pathname } = parsedUrl;
 
-  // Apply CORS middleware to specific routes
-  if (pathname === "/api/stripe/monthlysubscribe") {
-    return cors(req, res);
-  }
+//   // Apply CORS middleware to specific routes
+//   if (pathname === "/api/stripe/monthlysubscribe") {
+//     return cors(req, res);
+//   }
 
-  return handler(req, res);
-});
+//   return handler(req, res);
+// });
 
-server.listen(3000, (err) => {
-  if (err) throw err;
-  console.log("> Ready on http://localhost:3000");
-});
+// server.listen(3000, (err) => {
+//   if (err) throw err;
+//   console.log("> Ready on http://localhost:3000");
+// });
 
 // Export the handler function
 module.exports = handler;
