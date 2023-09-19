@@ -53,7 +53,7 @@ async function handler(req, res) {
       customer: customer.id,
       items: [
         {
-          price: "price_1NqgyfJan6UIWMGShskBHDzC",
+          price: "price_1NrsXKKRsEKMHleBxdSDaV7X",
         },
       ],
       trial_period_days: 7,
