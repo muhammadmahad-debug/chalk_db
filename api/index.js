@@ -12,7 +12,6 @@ const app = express();
 app.use(express.json({ limit: "4mb" }));
 app.use(helmet());
 app.use(cors());
-app.options("*", cors());
 
 app.use("/api/stripe", stripeRoutes);
 app.use("/api/users", userRoutes);
