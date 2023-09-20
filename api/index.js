@@ -8,10 +8,10 @@ const userRoutes = require("../routes/userRoute");
 
 connectDB();
 const app = express();
+app.use(cors());
 
 app.use(express.json({ limit: "4mb" }));
 app.use(helmet());
-app.use(cors());
 
 app.use("/api/stripe", stripeRoutes);
 app.use("/api/users", userRoutes);
